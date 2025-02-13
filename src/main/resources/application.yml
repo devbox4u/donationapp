@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydb
+    username: postgres
+    password: postgres
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+server:
+  port: 9090
+  error:
+    include-message: always
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
