@@ -8,14 +8,14 @@ pipeline {
                     url: 'https://github.com/devbox4u/donationapp.git'
             }
         }
-        stage('Build') {
+        stage('Build and Test') {
             steps {
                 sh './mvnw clean package'
             }
         }
-        stage('Test') {
+        stage('Code Quality Check') {
             steps {
-                sh './mvnw test'
+                sh './mvnw checkstyle:check'
             }
         }
     }
